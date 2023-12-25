@@ -4,15 +4,19 @@ const { Schema } = mongoose
 const actorSchema = new mongoose.Schema({
   name: {
     type: String,
+    required: [true, "Please provide a name"],
   },
   gender: {
     type: String,
+    required: [true, "Please provide a gender"],
   },
   dateOfBirth: {
     type: Date,
+    required: [true, "Please provide a date of birth"],
   },
   bio: {
     type: String,
+    required: [true, "Please provide a bio"],
   },
   movies: {
     type: [Schema.Types.ObjectId],
